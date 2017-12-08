@@ -18,15 +18,25 @@ if ($link == false){
 
 		        print("Произошла ошибка при выполнении запроса");
 			    }
-	    else {
+	else {
+
+?>
+<TABLE>
+<TR>
+<TH>N</TH>
+<TH>Имя</TH>
+<TH>Фамилия</TH>
+<TH>Телефон</TH>
+</TR>
+<?php
 
 		             while ($row = mysqli_fetch_array($result)) {
-				         print("N: " . $row['contact_id'] . " Имя: " . $row['first_name'] ." Фамилия: " . $row['last_name'] ." телефон : " . $row['phone'] . "<br>");
+				         print("<TR><TD>" . $row['contact_id'] . "</TD><TD>" . $row['first_name'] ."</TD><TD>" . $row['last_name'] ."</TD><TD>" . $row['phone'] . "</TD></TR>");
 			     }
 	    }
 }
 ?>
-<HR>
+</TABLE>
 
 
 
