@@ -21,7 +21,7 @@ if ($link == false){
 	else {
 
 ?>
-<TABLE>
+<TABLE BORDER=1 >
 <TR>
 <TH>N</TH>
 <TH>Имя</TH>
